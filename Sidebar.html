@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./style.css" />
+  <title>Sidebar</title>
+</head>
+
+<body>
+  <div class="h-screen bg-[#141816] p-[20px] pb-[60px] sidebar active">
+    <nav class="mb-40">
+      <div class="container mx-auto px-4">
+        <div class="row flex flex-wrap justify-between">
+          <div class="navbar-brand">
+            <a href="#!" class="text-white text-lg font-bold flex items-center gap-4">
+              <div class=" w-12 h-12 rounded-full bg-[#1D9A84]"></div>
+              <span class="font-roboto font-bold leading-[21px]">
+                USPENSKI <br class="" />
+                SCHOOL
+              </span>
+            </a>
+          </div>
+          <div class="navbar-content flex flex-wrap items-center gap-14">
+            <div class="btn-submit">
+              <a href="#!" class="text-[16px] font-medium block px-[30px] py-[15px] bg-[#1D9A84] text-white ">Поступить
+                в школу
+              </a>
+            </div>
+            <div class="btn-menu hamburger-menu active">
+              <button onClick>
+                <span></span>
+                <span></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="container mx-auto">
+      <div class="grid grid-cols-3 gap-5 mb-[150px]">
+        <div>
+          <ul>
+            <li class="mb-[50px] sidebar-links" data-hover="education">
+              <a href="#!" class="text-2xl uppercase text-white"><span>Образование</span></a>
+            </li>
+            <li class="mb-[50px] sidebar-links" data-hover="school">
+              <a href="#!" class="text-2xl uppercase text-white"><span>Школа</span></a>
+            </li>
+            <li class="mb-[50px] sidebar-links" data-hover="media">
+              <a href="#!" class="text-2xl uppercase text-white"><span>Медиа</span></a>
+            </li>
+            <li class="mb-[50px] sidebar-links" data-hover="cooperation">
+              <a href="#!" class="text-2xl uppercase text-white"><span>Сотрудничество</span></a>
+            </li>
+            <li class="mb-[50px] sidebar-links" data-hover="studying_proccess">
+              <a href="#!" class="text-2xl uppercase text-white"><span>Учебный процесс</span></a>
+            </li>
+            <li class="mb-[50px] sidebar-links" data-hover="poster">
+              <a href="#!" class="text-2xl uppercase text-white"><span>Афиша</span></a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <ul id="inner-links"></ul>
+        </div>
+        <div>
+          <div class="relative pb-[30px] pr-[30px]">
+            <img src="./img/sidebar/default.jpg" id="img-sidebar" class="h-auto w-full relative z-20  " />
+            <div class="absolute  z-10 top-[30px] left-[30px] bg-[#325746] linksBox"></div>
+          </div>
+        </div>
+      </div>
+      <div class="container mx-auto">
+        <div class="flex items-end justify-between">
+          <div class="contacts">
+            <a href="#!" class="mb-5 text-lg text-white inline-block">+998 71 248 45 77</a>
+            <ul class="flex items-center gap-[30px]">
+              <li>
+                <a href="#!">
+                  <img src="./img/facebook.svg" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="#!">
+                  <img src="./img/instagram-line.svg" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="#!">
+                  <img src="./img/telegram.svg" alt="">
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="email">
+            <h3 class="text-lg text-white font-montserrat mb-5">Будьте в курсе <br> последних событий</h3>
+            <div class="flex items-center">
+              <input type="text"
+                class="input-email w-[280px] p-[9px] border-b border-[#fff] border-opacity-60 text-[#fff] text-opacity-60 bg-transparent focus:outline-none"
+                placeholder="Ваш e-mail">
+              <button class="py-[14px] px-[16px] bg-[#1d9a84]">
+                <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 1L7.5597 6.70179C7.79113 6.90296 7.78863 7.26313 7.55442 7.46106L1 13" stroke="white"
+                    stroke-width="2" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- ===========  script =========== -->
+    <script>
+      const sidebar = document.querySelector('.sidebar');
+      const links = {
+        education: [
+          'Дошкольное образование',
+          'Начальное обрахование',
+          'Среднее образование',
+          'Подготовительные курсы'
+        ],
+        school: [
+          'О школе',
+          'История школы',
+          'Нормативные документы',
+          'Коллектив',
+          'Выпускники',
+          'Лауреаты',
+        ],
+        media: [
+          'Новости',
+          'Объявления',
+          'Статьи',
+          'Галерея',
+        ],
+        cooperation: [],
+        studying_proccess: [],
+        poster: [],
+      }
+      const innerLinks = document.querySelector('#inner-links');
+      Object.entries(links).forEach(([key, value]) => {
+        document.querySelector(`[data-hover=${key}]`).addEventListener('mouseover', () => {
+          innerLinks.innerHTML = '';
+          document.querySelector('#img-sidebar').src = `./img/sidebar/${key}.jpg`;
+          value.forEach(item => {
+            const li = document.createElement('li');
+            li.classList.add('sidebar-links-no-before');
+            li.setAttribute('data-hover', key);
+            li.innerHTML = `<a href="#!" class="text-base text-white mb-5"><span>${item}</span></a>`;
+            innerLinks.appendChild(li);
+          })
+        });
+      });
+    </script>
+    <style>
+      .font-Montserrat {
+        font-family: 'Montserrat', sans-serif;
+      }
+    </style>
+</body>
+
+</html>
