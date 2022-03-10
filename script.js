@@ -6964,7 +6964,6 @@ class Nav {
       studying_proccess: [],
       poster: [],
     };
-    this.innerLinks = null;
   }
   init() {
     this.element.innerHTML = `<div class="container mx-auto px-4">
@@ -6994,70 +6993,81 @@ class Nav {
       </div>
     </div>`;
     this.sidebar.innerHTML = `<div class="h-screen bg-[#141816] p-[20px] pb-[60px] sidebar">
-      <nav class="mb-40">
-        <div class="container mx-auto px-4">
-          <div class="row flex flex-wrap justify-between">
-            <div class="navbar-brand">
-              <a href="#!" class="text-white text-lg font-bold flex items-center gap-4">
-                <div class=" w-12 h-12 rounded-full bg-[#1D9A84]"></div>
-                <span class="font-roboto font-bold leading-[21px]">
-                  USPENSKI <br class="" />
-                  SCHOOL
-                </span>
+    <nav class="mb-40">
+      <div class="container mx-auto px-4">
+        <div class="row flex flex-wrap justify-between">
+          <div class="navbar-brand">
+            <a href="#!" class="text-white text-lg font-bold flex items-center gap-4">
+              <div class=" w-12 h-12 rounded-full bg-[#1D9A84]"></div>
+              <span class="font-roboto font-bold leading-[21px]">
+                USPENSKI <br class="" />
+                SCHOOL
+              </span>
+            </a>
+          </div>
+          <div class="navbar-content flex flex-wrap items-center gap-14">
+            <div class="btn-submit sm:block hidden">
+              <a href="#!" class="text-[16px] font-medium block px-[30px] py-[15px] bg-[#1D9A84] text-white ">Поступить
+                в школу
               </a>
             </div>
-            <div class="navbar-content flex flex-wrap items-center gap-14">
-              <div class="btn-submit">
-                <a href="#!" class="text-[16px] font-medium block px-[30px] py-[15px] bg-[#1D9A84] text-white ">Поступить
-                  в школу
-                </a>
-              </div>
-              <div class="btn-menu hamburger-menu active">
-                <button onClick>
-                  <span></span>
-                  <span></span>
-                </button>
-              </div>
+            <div class="btn-menu hamburger-menu active">
+              <button onClick>
+                <span></span>
+                <span></span>
+              </button>
             </div>
           </div>
         </div>
-      </nav>
+      </div>
+    </nav>
     <div class="container mx-auto">
-      <div class="grid grid-cols-3 gap-5 mb-[150px]">
+      <div class="grid lg:grid-cols-3 sm:grid-cols-2 gap-5 mb-[150px]">
         <div>
           <ul>
             <li class="mb-[50px] sidebar-links" data-hover="education">
-              <a href="#!" class="text-2xl uppercase text-white"><span>Образование</span></a>
+              <a href="#!" class="sm:text-2xl text-xl uppercase text-white"><span>Образование</span></a>
             </li>
+            <ul class="h-full sm:hidden block inner_links_next_element_simbling"></ul>
             <li class="mb-[50px] sidebar-links" data-hover="school">
-              <a href="#!" class="text-2xl uppercase text-white"><span>Школа</span></a>
+              <a href="#!" class="sm:text-2xl text-xl uppercase text-white"><span>Школа</span></a>
             </li>
+            <ul class="h-full sm:hidden block inner_links_next_element_simbling"></ul>
             <li class="mb-[50px] sidebar-links" data-hover="media">
-              <a href="#!" class="text-2xl uppercase text-white"><span>Медиа</span></a>
+              <a href="#!" class="sm:text-2xl text-xl uppercase text-white"><span>Медиа</span></a>
             </li>
+            <ul class="h-full sm:hidden block inner_links_next_element_simbling"></ul>
             <li class="mb-[50px] sidebar-links" data-hover="cooperation">
-              <a href="#!" class="text-2xl uppercase text-white"><span>Сотрудничество</span></a>
+              <a href="#!" class="sm:text-2xl text-xl uppercase text-white"><span>Сотрудничество</span></a>
             </li>
+            <ul class="h-full sm:hidden block inner_links_next_element_simbling"></ul>
             <li class="mb-[50px] sidebar-links" data-hover="studying_proccess">
-              <a href="#!" class="text-2xl uppercase text-white"><span>Учебный процесс</span></a>
+              <a href="#!" class="sm:text-2xl text-xl uppercase text-white"><span>Учебный процесс</span></a>
             </li>
+            <ul class="h-full sm:hidden block inner_links_next_element_simbling"></ul>
             <li class="mb-[50px] sidebar-links" data-hover="poster">
-              <a href="#!" class="text-2xl uppercase text-white"><span>Афиша</span></a>
+              <a href="#!" class="sm:text-2xl text-xl uppercase text-white"><span>Афиша</span></a>
             </li>
+            <ul class="h-full sm:hidden block inner_links_next_element_simbling"></ul>
           </ul>
         </div>
         <div>
-          <ul id="inner-links"></ul>
+          <ul id="inner-links" class="sm:block hidden"></ul>
         </div>
-        <div>
-          <div class="relative h-full">
-            <img class="relative z-20" id="img-sidebar" src="./img/sidebar/default.jpg" alt="">
-            <div class="absolute top-[30px] z-10 right-0 left-[30px] bottom-0 bg-[#1d9a84]"></div>
+        <div class="lg:block hidden">
+          <div class="relative pb-[30px] pr-[30px]">
+            <img src="./img/sidebar/default.jpg" id="img-sidebar" class="h-auto w-full relative z-20  " />
+            <div class="absolute  z-10 top-[30px] left-[30px] bg-[#325746] linksBox"></div>
           </div>
         </div>
       </div>
       <div class="container mx-auto">
-        <div class="flex items-end justify-between">
+        <div class="flex flex-wrap sm:gap-0 gap-8 items-end justify-between">
+          <div class="btn-submit sm:hidden block w-full">
+            <a href="#!" class="text-[16px] font-medium text-center block px-[30px] py-[15px] bg-[#1D9A84] text-white ">Поступить
+              в школу
+            </a>
+          </div>
           <div class="contacts">
             <a href="#!" class="mb-5 text-lg text-white inline-block">+998 71 248 45 77</a>
             <ul class="flex items-center gap-[30px]">
@@ -7078,11 +7088,11 @@ class Nav {
               </li>
             </ul>
           </div>
-          <div class="email">
+          <div class="email sm:w-auto w-full">
             <h3 class="text-lg text-white font-montserrat mb-5">Будьте в курсе <br> последних событий</h3>
-            <div class="flex items-center">
+            <div class="flex items-center sm:w-auto w-full">
               <input type="text"
-                class="input-email w-[280px] p-[9px] border-b border-[#fff] border-opacity-60 text-[#fff] text-opacity-60 bg-transparent focus:outline-none"
+                class="input-email sm:w-[280px] w-full p-[9px] border-b border-[#fff] border-opacity-60 text-[#fff] text-opacity-60 bg-transparent focus:outline-none"
                 placeholder="Ваш e-mail">
               <button class="py-[14px] px-[16px] bg-[#1d9a84]">
                 <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -7094,7 +7104,8 @@ class Nav {
           </div>
         </div>
       </div>
-    </div>`;
+    </div>
+  </div>`;
     this.footer.innerHTML = `<footer class="bg-[#141816] mx-auto px-4 py-10">
     <div class="container mx-auto px-4">
       <div class="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
@@ -7150,7 +7161,6 @@ class Nav {
     </div>
     </div>
   </footer>`;
-    this.innerLinks = this.sidebar.querySelector("#inner-links");
     this.btn = this.element.querySelector("[onClick]");
     this.closeBtn = this.sidebar.querySelector("[onClick]");
     this.hamburgerMenu = this.element.querySelector(".hamburger-menu");
@@ -7160,23 +7170,71 @@ class Nav {
     this.closeBtn.addEventListener("click", () =>
       this.toggleHamburgerMenu(this.hamburgerMenu)
     );
-    Object.entries(this.links).forEach(([key, value]) => {
-      this.sidebar
-        .querySelector(`[data-hover=${key}]`)
-        .addEventListener("mouseover", () => {
-          this.innerLinks.innerHTML = "";
-          this.sidebar.querySelector(
-            "#img-sidebar"
-          ).src = `./img/sidebar/${key}.jpg`;
-          value.forEach((item) => {
-            const li = document.createElement("li");
-            li.classList.add("sidebar-links-no-before");
-            li.setAttribute("data-hover", key);
-            li.innerHTML = `<a href="#!" class="text-base text-white mb-5"><span>${item}</span></a>`;
-            this.innerLinks.appendChild(li);
-          });
+    const sidebarOverMenu = () => {
+      const smScreen = window.matchMedia("(max-width: 640px)");
+      if (smScreen.matches) {
+        Object.entries(this.links).forEach(([key, value]) => {
+          document
+            .querySelector(`[data-hover=${key}]`)
+            .addEventListener("click", function () {
+              const $this = document.querySelector(`[data-hover=${key}]`);
+              let innerLinks = $this.nextElementSibling;
+              let inner_links_next_element_simbling = document.querySelectorAll(
+                ".inner_links_next_element_simbling"
+              );
+              inner_links_next_element_simbling.forEach((element) => {
+                element.innerHTML = "";
+                element.classList.remove("active");
+              });
+              document.querySelectorAll(".sidebar-links").forEach((element) => {
+                element.classList.remove("mb-[20px]");
+                element.classList.add("mb-[50px]");
+              });
+              // innerLinks.innerHTML = '';
+              if (innerLinks.classList.contains("active")) {
+                value.forEach((item) => {
+                  innerLinks.innerHTML = "";
+                  $this.classList.add("mb-[50px]");
+                  $this.classList.remove("mb-[20px]");
+                  innerLinks.classList.remove("active");
+                });
+              } else {
+                value.forEach((item) => {
+                  const li = document.createElement("li");
+                  li.classList.add("sidebar-links-no-before");
+                  li.setAttribute("data-hover", key);
+                  li.innerHTML = `<a href="#!" class="text-base text-white mb-5"><span>${item}</span></a>`;
+                  innerLinks.appendChild(li);
+                  $this.classList.remove("mb-[50px]");
+                  $this.classList.add("mb-[20px]");
+                  innerLinks.classList.add("active");
+                });
+              }
+            });
         });
-    });
+      } else {
+        const innerLinks = document.querySelector("#inner-links");
+        Object.entries(this.links).forEach(([key, value]) => {
+          document
+            .querySelector(`[data-hover=${key}]`)
+            .addEventListener("mouseover", () => {
+              innerLinks.innerHTML = "";
+              document.querySelector(
+                "#img-sidebar"
+              ).src = `./img/sidebar/${key}.jpg`;
+              value.forEach((item) => {
+                const li = document.createElement("li");
+                li.classList.add("sidebar-links-no-before");
+                li.setAttribute("data-hover", key);
+                li.innerHTML = `<a href="#!" class="text-base text-white mb-5"><span>${item}</span></a>`;
+                innerLinks.appendChild(li);
+              });
+            });
+        });
+      }
+    }
+    sidebarOverMenu()
+    window.addEventListener("resize", sidebarOverMenu);
   }
   toggleHamburgerMenu(elem) {
     if (elem.classList.contains("active")) {
@@ -7357,7 +7415,6 @@ class GridGallery {
   resizeWindow() {
     window.addEventListener("resize", (e) => {
       this.init();
-      console.log(e);
     });
   }
 }

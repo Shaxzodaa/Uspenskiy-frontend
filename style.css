@@ -590,7 +590,15 @@ footer ul li a {
 .news-social .social:hover svg path {
   fill: white;
 }
-
+.inner_links_next_element_simbling {
+  max-height: 0px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.inner_links_next_element_simbling.active {
+  max-height: 1000px;
+  margin-bottom: 50px;
+}
 .container {
   max-width: 1180px !important;
 }
@@ -628,6 +636,13 @@ footer ul li a {
     left: 0;
     top: 50%;
     transform: translateY(-50%);
+  }
+  .sidebar .sidebar-links a:hover::before {
+    width: 30px;
+  }
+
+  .sidebar .sidebar-links a:hover span {
+    margin-left: 10px;
   }
 }
 @media (max-width: 639px) {

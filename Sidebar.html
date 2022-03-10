@@ -25,7 +25,7 @@
             </a>
           </div>
           <div class="navbar-content flex flex-wrap items-center gap-14">
-            <div class="btn-submit">
+            <div class="btn-submit sm:block hidden">
               <a href="#!" class="text-[16px] font-medium block px-[30px] py-[15px] bg-[#1D9A84] text-white ">Поступить
                 в школу
               </a>
@@ -41,33 +41,39 @@
       </div>
     </nav>
     <div class="container mx-auto">
-      <div class="grid grid-cols-3 gap-5 mb-[150px]">
+      <div class="grid lg:grid-cols-3 sm:grid-cols-2 gap-5 mb-[150px]">
         <div>
           <ul>
             <li class="mb-[50px] sidebar-links" data-hover="education">
-              <a href="#!" class="text-2xl uppercase text-white"><span>Образование</span></a>
+              <a href="#!" class="sm:text-2xl text-xl uppercase text-white"><span>Образование</span></a>
             </li>
+            <ul class="h-full sm:hidden block inner_links_next_element_simbling"></ul>
             <li class="mb-[50px] sidebar-links" data-hover="school">
-              <a href="#!" class="text-2xl uppercase text-white"><span>Школа</span></a>
+              <a href="#!" class="sm:text-2xl text-xl uppercase text-white"><span>Школа</span></a>
             </li>
+            <ul class="h-full sm:hidden block inner_links_next_element_simbling"></ul>
             <li class="mb-[50px] sidebar-links" data-hover="media">
-              <a href="#!" class="text-2xl uppercase text-white"><span>Медиа</span></a>
+              <a href="#!" class="sm:text-2xl text-xl uppercase text-white"><span>Медиа</span></a>
             </li>
+            <ul class="h-full sm:hidden block inner_links_next_element_simbling"></ul>
             <li class="mb-[50px] sidebar-links" data-hover="cooperation">
-              <a href="#!" class="text-2xl uppercase text-white"><span>Сотрудничество</span></a>
+              <a href="#!" class="sm:text-2xl text-xl uppercase text-white"><span>Сотрудничество</span></a>
             </li>
+            <ul class="h-full sm:hidden block inner_links_next_element_simbling"></ul>
             <li class="mb-[50px] sidebar-links" data-hover="studying_proccess">
-              <a href="#!" class="text-2xl uppercase text-white"><span>Учебный процесс</span></a>
+              <a href="#!" class="sm:text-2xl text-xl uppercase text-white"><span>Учебный процесс</span></a>
             </li>
+            <ul class="h-full sm:hidden block inner_links_next_element_simbling"></ul>
             <li class="mb-[50px] sidebar-links" data-hover="poster">
-              <a href="#!" class="text-2xl uppercase text-white"><span>Афиша</span></a>
+              <a href="#!" class="sm:text-2xl text-xl uppercase text-white"><span>Афиша</span></a>
             </li>
+            <ul class="h-full sm:hidden block inner_links_next_element_simbling"></ul>
           </ul>
         </div>
         <div>
-          <ul id="inner-links"></ul>
+          <ul id="inner-links" class="sm:block hidden"></ul>
         </div>
-        <div>
+        <div class="lg:block hidden">
           <div class="relative pb-[30px] pr-[30px]">
             <img src="./img/sidebar/default.jpg" id="img-sidebar" class="h-auto w-full relative z-20  " />
             <div class="absolute  z-10 top-[30px] left-[30px] bg-[#325746] linksBox"></div>
@@ -75,7 +81,12 @@
         </div>
       </div>
       <div class="container mx-auto">
-        <div class="flex items-end justify-between">
+        <div class="flex flex-wrap sm:gap-0 gap-8 items-end justify-between">
+          <div class="btn-submit sm:hidden block w-full">
+            <a href="#!" class="text-[16px] font-medium text-center block px-[30px] py-[15px] bg-[#1D9A84] text-white ">Поступить
+              в школу
+            </a>
+          </div>
           <div class="contacts">
             <a href="#!" class="mb-5 text-lg text-white inline-block">+998 71 248 45 77</a>
             <ul class="flex items-center gap-[30px]">
@@ -96,11 +107,11 @@
               </li>
             </ul>
           </div>
-          <div class="email">
+          <div class="email sm:w-auto w-full">
             <h3 class="text-lg text-white font-montserrat mb-5">Будьте в курсе <br> последних событий</h3>
-            <div class="flex items-center">
+            <div class="flex items-center sm:w-auto w-full">
               <input type="text"
-                class="input-email w-[280px] p-[9px] border-b border-[#fff] border-opacity-60 text-[#fff] text-opacity-60 bg-transparent focus:outline-none"
+                class="input-email sm:w-[280px] w-full p-[9px] border-b border-[#fff] border-opacity-60 text-[#fff] text-opacity-60 bg-transparent focus:outline-none"
                 placeholder="Ваш e-mail">
               <button class="py-[14px] px-[16px] bg-[#1d9a84]">
                 <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -114,34 +125,75 @@
       </div>
     </div>
   </div>
-    <!-- ===========  script =========== -->
-    <script>
-      const sidebar = document.querySelector('.sidebar');
-      const links = {
-        education: [
-          'Дошкольное образование',
-          'Начальное обрахование',
-          'Среднее образование',
-          'Подготовительные курсы'
-        ],
-        school: [
-          'О школе',
-          'История школы',
-          'Нормативные документы',
-          'Коллектив',
-          'Выпускники',
-          'Лауреаты',
-        ],
-        media: [
-          'Новости',
-          'Объявления',
-          'Статьи',
-          'Галерея',
-        ],
-        cooperation: [],
-        studying_proccess: [],
-        poster: [],
-      }
+  <!-- ===========  script =========== -->
+  <script>
+    const sidebar = document.querySelector('.sidebar');
+    const links = {
+      education: [
+        'Дошкольное образование',
+        'Начальное обрахование',
+        'Среднее образование',
+        'Подготовительные курсы'
+      ],
+      school: [
+        'О школе',
+        'История школы',
+        'Нормативные документы',
+        'Коллектив',
+        'Выпускники',
+        'Лауреаты',
+      ],
+      media: [
+        'Новости',
+        'Объявления',
+        'Статьи',
+        'Галерея',
+      ],
+      cooperation: [],
+      studying_proccess: [],
+      poster: [],
+    }
+    const smScreen = window.matchMedia('(max-width: 640px)');
+    if (smScreen.matches) {
+      Object.entries(links).forEach(([key, value]) => {
+        document.querySelector(`[data-hover=${key}]`).addEventListener('click', function () {
+          const $this = document.querySelector(`[data-hover=${key}]`)
+          console.log($this);
+          let innerLinks = $this.nextElementSibling;
+          let inner_links_next_element_simbling = document.querySelectorAll('.inner_links_next_element_simbling');
+          inner_links_next_element_simbling.forEach(element => {
+            element.innerHTML = '';
+            element.classList.remove('active');
+          });
+          document.querySelectorAll('.sidebar-links').forEach(element => {
+            element.classList.remove('mb-[20px]');
+            element.classList.add('mb-[50px]');
+          });
+          // innerLinks.innerHTML = '';
+          if (innerLinks.classList.contains('active')) {
+            value.forEach(item => {
+              innerLinks.innerHTML = '';
+              $this.classList.add('mb-[50px]');
+              $this.classList.remove('mb-[20px]');
+              innerLinks.classList.remove('active');
+            })
+          }
+          else {
+            value.forEach(item => {
+              const li = document.createElement('li');
+              li.classList.add('sidebar-links-no-before');
+              li.setAttribute('data-hover', key);
+              li.innerHTML = `<a href="#!" class="text-base text-white mb-5"><span>${item}</span></a>`;
+              innerLinks.appendChild(li);
+              $this.classList.remove('mb-[50px]');
+              $this.classList.add('mb-[20px]');
+              innerLinks.classList.add('active');
+            })
+          }
+        });
+      });
+    }
+    else {
       const innerLinks = document.querySelector('#inner-links');
       Object.entries(links).forEach(([key, value]) => {
         document.querySelector(`[data-hover=${key}]`).addEventListener('mouseover', () => {
@@ -156,12 +208,14 @@
           })
         });
       });
-    </script>
-    <style>
-      .font-Montserrat {
-        font-family: 'Montserrat', sans-serif;
-      }
-    </style>
+    }
+    
+  </script>
+  <style>
+    .font-Montserrat {
+      font-family: 'Montserrat', sans-serif;
+    }
+  </style>
 </body>
 
 </html>
