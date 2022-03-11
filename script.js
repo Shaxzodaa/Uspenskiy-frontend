@@ -7028,31 +7028,161 @@ class Nav {
             <li class="mb-[50px] sidebar-links" data-hover="education">
               <a href="#!" class="sm:text-2xl text-xl uppercase text-white"><span>Образование</span></a>
             </li>
-            <ul class="h-full sm:hidden block inner_links_next_element_simbling"></ul>
+            <ul class="h-full sm:hidden block inner_links_next_element_simbling">
+              <li>
+                <a href="#!" class="text-base text-white mb-5 transition duration-200 hover:text-[#1d9a84] block">
+                  <span>
+                    Дошкольное образование
+                  </span>
+                </a>
+              </li>
+              <li><a href="#!"
+                  class="text-base text-white mb-5 transition duration-200 hover:text-[#1d9a84] block"><span>
+                    Начальное обрахование
+                  </span></a></li>
+              <li><a href="#!"
+                  class="text-base text-white mb-5 transition duration-200 hover:text-[#1d9a84] block"><span>
+                    Среднее образование
+                  </span></a></li>
+              <li><a href="#!"
+                  class="text-base text-white mb-5 transition duration-200 hover:text-[#1d9a84] block"><span>
+                    Подготовительные курсы
+                  </span></a></li>
+            </ul>
             <li class="mb-[50px] sidebar-links" data-hover="school">
               <a href="#!" class="sm:text-2xl text-xl uppercase text-white"><span>Школа</span></a>
             </li>
-            <ul class="h-full sm:hidden block inner_links_next_element_simbling"></ul>
+            <ul class="h-full sm:hidden block inner_links_next_element_simbling">
+              <li><a href="#!"
+                  class="text-base text-white mb-5 transition duration-200 hover:text-[#1d9a84] block"><span>
+                    О школе
+                  </span></a></li>
+              <li><a href="#!"
+                  class="text-base text-white mb-5 transition duration-200 hover:text-[#1d9a84] block"><span>
+                    История школы
+                  </span></a></li>
+              <li><a href="#!"
+                  class="text-base text-white mb-5 transition duration-200 hover:text-[#1d9a84] block"><span>
+                    Нормативные документы
+                  </span></a></li>
+              <li><a href="#!"
+                  class="text-base text-white mb-5 transition duration-200 hover:text-[#1d9a84] block"><span>
+                    Коллектив
+                  </span></a></li>
+              <li><a href="#!"
+                  class="text-base text-white mb-5 transition duration-200 hover:text-[#1d9a84] block"><span>
+                    Выпускники
+                  </span></a></li>
+              <li><a href="#!"
+                  class="text-base text-white mb-5 transition duration-200 hover:text-[#1d9a84] block"><span>
+                    Лауреаты
+                  </span></a></li>
+            </ul>
             <li class="mb-[50px] sidebar-links" data-hover="media">
               <a href="#!" class="sm:text-2xl text-xl uppercase text-white"><span>Медиа</span></a>
             </li>
-            <ul class="h-full sm:hidden block inner_links_next_element_simbling"></ul>
+            <ul class="h-full sm:hidden block inner_links_next_element_simbling">
+              <li><a href="#!"
+                  class="text-base text-white mb-5 transition duration-200 hover:text-[#1d9a84] block"><span>
+                    Новости
+                  </span></a></li>
+              <li><a href="#!"
+                  class="text-base text-white mb-5 transition duration-200 hover:text-[#1d9a84] block"><span>
+                    Объявления
+                  </span></a></li>
+              <li><a href="#!"
+                  class="text-base text-white mb-5 transition duration-200 hover:text-[#1d9a84] block"><span>
+                    Статьи
+                  </span></a></li>
+              <li><a href="#!"
+                  class="text-base text-white mb-5 transition duration-200 hover:text-[#1d9a84] block"><span>
+                    Галерея
+                  </span></a></li>
+            </ul>
             <li class="mb-[50px] sidebar-links" data-hover="cooperation">
               <a href="#!" class="sm:text-2xl text-xl uppercase text-white"><span>Сотрудничество</span></a>
             </li>
-            <ul class="h-full sm:hidden block inner_links_next_element_simbling"></ul>
             <li class="mb-[50px] sidebar-links" data-hover="studying_proccess">
               <a href="#!" class="sm:text-2xl text-xl uppercase text-white"><span>Учебный процесс</span></a>
             </li>
-            <ul class="h-full sm:hidden block inner_links_next_element_simbling"></ul>
             <li class="mb-[50px] sidebar-links" data-hover="poster">
               <a href="#!" class="sm:text-2xl text-xl uppercase text-white"><span>Афиша</span></a>
             </li>
-            <ul class="h-full sm:hidden block inner_links_next_element_simbling"></ul>
           </ul>
         </div>
         <div>
-          <ul id="inner-links" class="sm:block hidden"></ul>
+          <div id="inner-links" class="sm:block hidden">
+            <!-- Education hover links -->
+            <ul id="education" class="hidden center-links">
+              <li>
+                <a href="#!" class="text-base text-white mb-5 transition duration-200 hover:text-[#1d9a84] block">
+                  <span>
+                    Дошкольное образование
+                  </span>
+                </a>
+              </li>
+              <li><a href="#!"
+                  class="text-base text-white mb-5 transition duration-200 hover:text-[#1d9a84] block"><span>
+                    Начальное обрахование
+                  </span></a></li>
+              <li><a href="#!"
+                  class="text-base text-white mb-5 transition duration-200 hover:text-[#1d9a84] block"><span>
+                    Среднее образование
+                  </span></a></li>
+              <li><a href="#!"
+                  class="text-base text-white mb-5 transition duration-200 hover:text-[#1d9a84] block"><span>
+                    Подготовительные курсы
+                  </span></a></li>
+            </ul>
+
+            <!-- School hover links -->
+            <ul id="school" class="hidden center-links">
+              <li><a href="#!"
+                  class="text-base text-white mb-5 transition duration-200 hover:text-[#1d9a84] block"><span>
+                    О школе
+                  </span></a></li>
+              <li><a href="#!"
+                  class="text-base text-white mb-5 transition duration-200 hover:text-[#1d9a84] block"><span>
+                    История школы
+                  </span></a></li>
+              <li><a href="#!"
+                  class="text-base text-white mb-5 transition duration-200 hover:text-[#1d9a84] block"><span>
+                    Нормативные документы
+                  </span></a></li>
+              <li><a href="#!"
+                  class="text-base text-white mb-5 transition duration-200 hover:text-[#1d9a84] block"><span>
+                    Коллектив
+                  </span></a></li>
+              <li><a href="#!"
+                  class="text-base text-white mb-5 transition duration-200 hover:text-[#1d9a84] block"><span>
+                    Выпускники
+                  </span></a></li>
+              <li><a href="#!"
+                  class="text-base text-white mb-5 transition duration-200 hover:text-[#1d9a84] block"><span>
+                    Лауреаты
+                  </span></a></li>
+            </ul>
+
+            <!-- Media hover links -->
+            <ul id="media" class="hidden center-links">
+              <li><a href="#!"
+                  class="text-base text-white mb-5 transition duration-200 hover:text-[#1d9a84] block"><span>
+                    Новости
+                  </span></a></li>
+              <li><a href="#!"
+                  class="text-base text-white mb-5 transition duration-200 hover:text-[#1d9a84] block"><span>
+                    Объявления
+                  </span></a></li>
+              <li><a href="#!"
+                  class="text-base text-white mb-5 transition duration-200 hover:text-[#1d9a84] block"><span>
+                    Статьи
+                  </span></a></li>
+              <li><a href="#!"
+                  class="text-base text-white mb-5 transition duration-200 hover:text-[#1d9a84] block"><span>
+                    Галерея
+                  </span></a></li>
+            </ul>
+          </div>
         </div>
         <div class="lg:block hidden">
           <div class="relative pb-[30px] pr-[30px]">
@@ -7064,7 +7194,8 @@ class Nav {
       <div class="container mx-auto">
         <div class="flex flex-wrap sm:gap-0 gap-8 items-end justify-between">
           <div class="btn-submit sm:hidden block w-full">
-            <a href="#!" class="text-[16px] font-medium text-center block px-[30px] py-[15px] bg-[#1D9A84] text-white ">Поступить
+            <a href="#!"
+              class="text-[16px] font-medium text-center block px-[30px] py-[15px] bg-[#1D9A84] text-white ">Поступить
               в школу
             </a>
           </div>
@@ -7183,32 +7314,26 @@ class Nav {
                 ".inner_links_next_element_simbling"
               );
               inner_links_next_element_simbling.forEach((element) => {
-                element.innerHTML = "";
                 element.classList.remove("active");
               });
               document.querySelectorAll(".sidebar-links").forEach((element) => {
                 element.classList.remove("mb-[20px]");
                 element.classList.add("mb-[50px]");
               });
-              // innerLinks.innerHTML = '';
-              if (innerLinks.classList.contains("active")) {
-                value.forEach((item) => {
-                  innerLinks.innerHTML = "";
-                  $this.classList.add("mb-[50px]");
-                  $this.classList.remove("mb-[20px]");
-                  innerLinks.classList.remove("active");
-                });
-              } else {
-                value.forEach((item) => {
-                  const li = document.createElement("li");
-                  li.classList.add("sidebar-links-no-before");
-                  li.setAttribute("data-hover", key);
-                  li.innerHTML = `<a href="#!" class="text-base text-white mb-5"><span>${item}</span></a>`;
-                  innerLinks.appendChild(li);
-                  $this.classList.remove("mb-[50px]");
-                  $this.classList.add("mb-[20px]");
-                  innerLinks.classList.add("active");
-                });
+              if (innerLinks) {
+                if (innerLinks.classList.contains("active")) {
+                  value.forEach((item) => {
+                    $this.classList.add("mb-[50px]");
+                    $this.classList.remove("mb-[20px]");
+                    innerLinks.classList.remove("active");
+                  });
+                } else {
+                  value.forEach((item) => {
+                    $this.classList.remove("mb-[50px]");
+                    $this.classList.add("mb-[20px]");
+                    innerLinks.classList.add("active");
+                  });
+                }
               }
             });
         });
@@ -7218,22 +7343,21 @@ class Nav {
           document
             .querySelector(`[data-hover=${key}]`)
             .addEventListener("mouseover", () => {
-              innerLinks.innerHTML = "";
               document.querySelector(
                 "#img-sidebar"
               ).src = `./img/sidebar/${key}.jpg`;
-              value.forEach((item) => {
-                const li = document.createElement("li");
-                li.classList.add("sidebar-links-no-before");
-                li.setAttribute("data-hover", key);
-                li.innerHTML = `<a href="#!" class="text-base text-white mb-5"><span>${item}</span></a>`;
-                innerLinks.appendChild(li);
+              const allLinks = document.querySelectorAll(".center-links");
+              allLinks.forEach((element) => {
+                element.classList.add("hidden");
               });
+              if (document.querySelector(`#${key}`)) {
+                document.querySelector(`#${key}`).classList.remove("hidden");
+              }
             });
         });
       }
-    }
-    sidebarOverMenu()
+    };
+    sidebarOverMenu();
     window.addEventListener("resize", sidebarOverMenu);
   }
   toggleHamburgerMenu(elem) {
