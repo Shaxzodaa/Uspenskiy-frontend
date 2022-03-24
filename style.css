@@ -601,6 +601,9 @@ footer ul li a {
 }
 .container {
   max-width: 1180px !important;
+  margin: auto;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 @media (max-width: 1279px) {
   .container {
